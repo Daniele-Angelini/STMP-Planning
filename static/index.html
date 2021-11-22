@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>STMP Planning</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/leaflet.css" rel="stylesheet">
+    <link href="css/leaflet.zoomhome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/fontawesome.css" rel="stylesheet">
+    <link href="css/solid.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+     <div id="mapid" class="leaflet-container leaflet-touch leaflet-retina leaflet-safari leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" >
+         <div class="leaflet-control-container" style = "position:relative;top:80px">
+            <div class = "leaflet-left" style = "position:absolute">
+                <div class="panel panel-default leaflet-control noBorder">
+                    <div class="panel-body">
+                        <a id="openCity" type="button" class="btn btn-default button" style="color:#C062FF;">
+                            <i class="fas fa-city City" aria-hidden="true"></i>
+                        </a>
+                        <button id="closeCity" type="button" class="close noPannello" aria-label="Close">
+                            <span class="h3" aria-hidden="true">×</span>
+                        </button>
+                        <div id="pannelloCity" class="noPannello">
+                            <div class="text-center">
+                                Scegliere la città
+                            </div>
+                            <div class="dropdown bootstrap-select text-center">
+                                <select data-width="100%" data-style="btn-light btn-sm" class="scegliCity" data-toggle="tooltip">
+                                    <option selected>Salerno</option>
+                                    <option disabled>Napoli</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="leaflet-control-container" style = "position:relative;top:130px">
+            <div class = "leaflet-left" style = "position:absolute">
+                <div class="panel panel-default leaflet-control noBorder">
+                    <div class="panel-body">
+                        <a id="openOrari" class="btn btn-default button" style="color:#2c74b4;">
+                            <i class="fas fa-clock Clock" aria-hidden="true"></i>
+                        </a>
+                        <button id="closeOrari" class="close noPannello" aria-label="Close">
+                            <span class="h3" aria-hidden="true">×</span>
+                        </button>
+                        <div id="pannelloOrari" class="noPannello">
+                            <div class="text-center">
+                                Scegliere l'orario
+                            </div>
+                            <div class="dropdown bootstrap-select text-center">
+                                <select class="scegliOrario" data-width="100%" data-style="btn-light btn-sm" data-toggle="tooltip">
+                                    <option>07:00</option>
+                                    <option>10:00</option>
+                                    <option>13:00</option>
+                                    <option>16:00</option>
+                                    <option>19:00</option>
+                                    <option>22:00</option>
+                                    <option>media</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="leaflet-control-container" style = "position:relative;top:280px;left:2px">
+            <div class="leaflet-control">
+                <a id="openPlanning" type="button" class="btn btn-default button" style="color:#C062FF; display:none">
+                    <i class="fas fa-chart-line City" aria-hidden="true"></i>
+                </a>
+                <div id="pannelloPlanning" class="panel panel-planning">
+                    <div class="panel-heading">
+                        <strong>Pianificazione percorsi</strong>
+                        <button id="closePlanning" type="button" class="close" aria-label="Close">
+										<span class="h3" aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="panel-body p15">
+                        <h4>Seleziona la simulazione</h4>
+                        <select class="selectPlanning" data-width="100%" data-style="btn-light btn-sm" data-toggle="tooltip">
+                            <option selected>Utilizzo di app per accedere ai parcheggi</option>
+                            <option disabled>Inserimento di una nuova linea di bus</option>
+                            <option disabled>Allargamento di una strada</option>
+                        </select>
+                        <div class="row p15">
+                            <div class="col-sm-6" style="text-align:center">
+                                <button id="noapp" class="btn btn-primary btn-sm btn-planning">Senza App</button>
+                            </div>
+                            <div class="col-sm-6" style="text-align:center">
+                                <button id="withapp" class="btn btn-success btn-sm btn-planning">Con App</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12" style="text-align:center">
+                                <button id="appdiff" class="btn btn-info btn-sm btn-planning">Miglioramento</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+			</div>
+	        <div class="leaflet-control-container" style = "position:relative;top:80px">
+            <div class = "leaflet-right" style = "position:absolute">
+               <div class = "panel panel-default leaflet-control noBorder" style="height:340px;width:120px">
+                    <div class="panel-body">
+                        <button  id="openLegenda" class="btn btn-default button noPannello" title="Apri pannello legenda">
+                            <i class="fas fa-list Info"></i>
+                       </button>
+                         <button id="closeLegenda" type="button" class="close" aria-label="Close">
+                            <span class="h3" aria-hidden="true">×</span>
+                        </button>
+                        <div id="pannelloLegenda">
+                            <div class="text-center">
+                                Tempo di percorrenza <br> (minuti)
+                            </div>
+                            <div id="tavolaColori"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script>
+            console.log("sono nello script");
+            console.log(typeof jQuery);
+            if (typeof jQuery == "undefined"){
+                $ = jQuery = window.$ = window.jQuery = require('jquery');
+                console.log(jQuery);
+            }
+    </script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/leaflet.js" type="text/javascript"></script>
+    <script src="js/leaflet.zoomhome.js" type="text/javascript"></script>
+	<script src="js/Polyline.encoded.js" type="text/javascript"></script>
+	<script src="js/functions.js" type="text/javascript"></script>
+
+</body>
+</html>
+
+

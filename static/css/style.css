@@ -1,0 +1,244 @@
+.controls {
+    margin-top: 3px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 26px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#mapid{
+    height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.blueBlock{
+    height: 60px;
+    width: 450px;
+    position: relative;
+    left: 400px;
+    background: #2c74b4;
+}
+.pannelloAlto{
+    color: white;
+    position: relative;
+    top: 6px;
+    font-size: 18px
+}
+
+.pannelloBasso{
+    color: white;
+    font-size: 13px
+}
+
+.info1{
+    font-size: 13px
+}
+
+.noBorder{
+    border-width: 0px
+}
+.button{
+    width: 50px;
+    height: 50px;
+}
+.mezzi{
+    width: 50px;
+    height: 50px;
+}
+.poi{
+    width: 50px;
+    height: 50px;
+}
+
+.City{
+    font-size: 35px;
+    position: relative;
+    top: -5px;
+    left: -10px
+}
+
+.noPannello{
+    display: none;
+}
+
+.scegliCity{
+    width: 150px;
+    position: relative;
+}
+
+.Info{
+    font-size: 32px;
+    position: relative;
+    top: -3px;
+    left: -3px;
+    background: -webkit-linear-gradient(#9E0142,#A9DDA2, #5E4FA2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Clock{
+    font-size: 35px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+.Simulate{
+    font-size: 35px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+}
+
+.scegliOrario{
+    width: 150px;
+    position: relative;
+}
+
+.Bus{
+    font-size: 35px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+    color: #2c74b4;
+}
+.Car{
+    font-size: 35px;
+    position: relative;
+    left:-5px;
+    top:-5px;
+    color: #2c74b4;
+}
+
+.Walking{
+    font-size: 35px;
+    position: relative;
+    top:-5px;
+    color: #2c74b4;
+}
+
+.Hospital{
+    font-size: 35px;
+    position: relative;
+    top: -5px;
+    left: -5px;
+    color: red;
+}
+.Parking{
+    font-size: 35px;
+    position: relative;
+    top: -5px;
+    left: -3px;
+    color: #2c74b4;
+}
+
+#parking{
+    margin-top:20px;
+}
+
+.Shopping{
+    font-size: 35px;
+    position: relative;
+    top: -5px;
+    left: -7px;
+    color: green;
+}
+.panel-planning {
+  border-color: #006699;
+}
+.panel-planning > .panel-heading {
+  color: #006699;
+  background-color: #f5f5f5;
+  border-color: #008099;
+}
+.panel-planning > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #008099;
+}
+
+.panel-planning a {
+    color: #008099;
+}
+
+.panel-planning a:hover {
+    color: #3d8b3d;
+}
+.modal-style{
+    border: 5px groove #2c74b4;
+    width: 1050px;
+    height: 540px;
+    position: relative;
+    top: 45px;
+    right: 220px
+}
+
+.tooltipPOI{
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none
+}
+
+.p15{
+    padding: 15px;
+}
+#pannelloTempo {
+    opacity: 0.9;
+    background: #FFF;
+    background-attachment: fixed;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    height: 350px;
+    width: 140px;
+    font-size: 14px;
+}
+
+#headingTempo {
+    opacity: 1;
+    background: #FFF;
+    background-attachment: fixed;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    height: 50px;
+    width: 150px;
+}
+
+.legendColor {
+    align-content: left;
+    margin-left: 10px;
+}
+
+.colorSpan {
+    width: 10px;
+    height: 10px;
+    font: 10px/12px Montserrat, sans-serif;
+    float: left;
+    margin-left: 9px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+.livelliTempo {
+    height: 10px;
+    width: 60px;
+    font: 14px/16px Montserrat, sans-serif;
+    float:left;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#pannelloLegenda{
+    height: 300px;
+    background-color: white;
+}
