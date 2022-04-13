@@ -12,7 +12,7 @@ import tornado.web
 
 #from dotenv import load_dotenv
 
-dbplanning = "dbname='planning' host='cloud.nergal.it' user='planning' password='settembre22'"
+dbplanning = "dbname='planning' host='cloud.nergal.it' user='planning' password='*********'"
 osmtiles = "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
 osmoptions = json.dumps({
     'attribution': 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
